@@ -106,6 +106,7 @@ P = sum( |x|<sup>2</sup> )
 And Signal to Quantization Noise Ratio (SQNR) was measured as the ratio of the power of the pure signal to the power of the quantizaiton noise.
 
 SQNR = P<sub>s</sub> / P<sub>n</sub>
+
 SQNR<sub>dB</sub> = 10Log<sub>10</sub>(SQNR)
 
 In DSP literature it is common to estimate the SQNR of a quantized full-scale sine wave as:
