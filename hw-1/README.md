@@ -123,7 +123,7 @@ And Signal to Quantization Noise Ratio (SQNR) was measured as the ratio of the p
 </p>
 <p align="center">SQNR<sub>dB</sub> = 10Log<sub>10</sub>(SQNR)</p>
 
-In DSP literature it is common to estimate the SQNR of a quantized full-scale sine wave as:
+In DSP literature (for example [Analog Devices MT-229](https://www.analog.com/media/en/training-seminars/tutorials/MT-229.pdf)) it is common to estimate the SQNR of a quantized full-scale sine wave as:
 
 <p align="center">SQNR<sub>dB</sub> = 1.76 + 6.02*b [dB]
 </p>
