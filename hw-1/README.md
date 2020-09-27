@@ -1,6 +1,9 @@
 # Homework 1
 Author: Aaron Lim
+
 Date: 29 September 2020
+
+# Your DSP Experience
 
 ## On the project you are currently doing:
 
@@ -14,6 +17,8 @@ I have seen projects use any and all of those options. FPGA's are popular becaus
 
 ### Which ADC and DAC?  How many bits?  What is the sample rate?
 There's a small software defined radio (SDR) that I often use, which contains two transceiver IC's. Each uses a 12-bit ADC and samples at 60MSps. In addition, there is an arbitrary waveform generator block in firmware thata contains several bypassable upsampling filters, allowing you to take in data at a few other rates less than 60MSps.
+
+# Sampling
 
 ## Using either Matlab, Simulink, or Python
 
@@ -50,6 +55,8 @@ The data shows that to prevent aliasing, the sample rate of your system must be 
 Nyquist Criterion: f<sub>s</sub> > 2f<sub>max</sub>
 
 Real systems must account for nonidealities in their hardware, which can lead to frequency errors. It is important to operate well above the Nyquist rate.
+
+# Quantization
 
 ### Quantize the signal, using quantizing levels (i.e. different numbers of bits)
 Signals were quantized using a mid-rise quantizer, with levels:
