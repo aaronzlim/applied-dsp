@@ -111,7 +111,7 @@ SQNR<sub>dB</sub> = 10Log<sub>10</sub>(SQNR)
 
 In DSP literature it is common to estimate the SQNR of a quantized full-scale sine wave as:
 
-SQNR<sub>dB</sub> = 1.76 + 6.02b [dB]
+SQNR<sub>dB</sub> = 1.76 + 6.02*b [dB]
 
 Where b is the number of bits.
 
