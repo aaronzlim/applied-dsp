@@ -44,7 +44,7 @@ Note the 300Hz component is at the very edge of the band, and due to the limited
 ##### Sampling at 610Sps (2.03x f<sub>max</sub>)
 Note that no aliasing occurs, but with very little margin for frequency error.
 
-<p align="center>
+<p align="center">
     <img src="plots/comparing_sample_rates_610_Sps.png" alt="Sampled at 610Sps" width="500"/>
 </p>
 
