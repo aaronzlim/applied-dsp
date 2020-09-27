@@ -1,7 +1,5 @@
-# Homework 1
-Author: Aaron Lim
-
-Date: 29 September 2020
+# Applied DSP - Homework 1
+Aaron Lim - 29 September 2020
 
 # Your DSP Experience
 
