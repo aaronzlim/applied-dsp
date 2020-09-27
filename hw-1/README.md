@@ -26,18 +26,22 @@ The signal chosen is composed of three complex sinusoids at frequencies:
 ### Sample this signal at different sampling rates
 ###### Sampling at 450Sps (1.5x f<sub>max</sub>)
 Note the 300Hz component has been aliased.
+
 ![Sampled at 450Sps](plots/comparing_sample_rates_450_Sps.png)
 
 ###### Sampling at 600Sps (2x f<sub>max</sub>)
 Note the 300Hz componoent is at the very edge of the band, and due to the limited FFT resolution, it appears at -300Hz.
+
 ![Sampled at 600Sps](plots/comparing_sample_rates_600_Sps.png)
 
 ###### Sampling at 610Sps (2.03x f<sub>max</sub>)
 Note that no aliasing occurs, but with very little margin for frequency error.
+
 ![Sampled at 610Sps](plots/comparing_sample_rates_610_Sps.png)
 
 ###### Sampling at 3000Sps (10x f<sub>max</sub>)
 Note that aliasing does not occur, and there is a lot of margin for frequency error.
+
 ![Sampled at 3000Sps](plots/comparing_sample_rates_3000_Sps.png)
 
 #### What is the minimum sampling rate allowed?
