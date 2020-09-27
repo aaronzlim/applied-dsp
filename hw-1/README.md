@@ -85,8 +85,11 @@ Because the signal under test is complex, the real and imaginary (I and Q) data 
 
 #### Analyze the spectrum of the signal
 
-<center>
+<p align="center">
     <img src="plots/spectrum_2_bits.png" alt="SQNR with 2 bits" width="330"/>
+</p>
+
+<center>
     <img src="plots/spectrum_4_bits.png" alt="SQNR with 2 bits" width="330"/>
     <img src="plots/spectrum_6_bits.png" alt="SQNR with 2 bits" width="330"/>
     <img src="plots/spectrum_8_bits.png" alt="SQNR with 2 bits" width="330"/>
@@ -104,7 +107,11 @@ It is clear from the plots that more bits leads to a lower noise floor.
 
 Quantization noise was measured as:
 
-<center>Noise Signal = Pure Signal - Quantized Signal<center>
+<div>
+    <center>
+        Noise Signal = Pure Signal - Quantized Signal
+    </center>
+</div>
 
 Power for both the pure and noise signals was measured as:
 
