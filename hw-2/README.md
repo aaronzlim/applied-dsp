@@ -9,6 +9,10 @@ Use your choice of software to generate a test signal consisting of the sum of t
 
 The first sinusoid should have a frequency of $\frac{1}{16}f_s$. The second should have a frequency of $\frac{1}{4}f_s$. The third should have a frequency of $\frac{7}{16}f_s$.
 
+[//]: # (The following is only used to generate the PDF)
+
+[//]: # (The first sinusoid should have a frequency of fs/16 The second should have a frequency of fs/4. The third should have a frequency of 7fs/16.)
+
 Simulate the Zero-Order Hold of a DAC by repeating each sample 10 times. This is roughly equivalent to generating an analog signal using a DAC, and then sampling that signal with an ADC running at 10x the sample rate.
 
 Use an FFT to examine the signal in the frequency domain.
@@ -19,7 +23,7 @@ Use an FFT to examine the signal in the frequency domain.
 The figure below shows the signal under test prior to being sent through the DAC. The sample rate is 50kHz and the three tones appear at 3.125kHZ, 12.5kHz, and 21.875kHz.
 
 <p align="center">
-    <img src="plots/pure_spectrum.png" alt="Pure spectrum" width="500"/>
+    <img src="plots/pure_spectrum.png" alt="Pure spectrum" width="400"/>
     <p style="text-align:center; font-size:12px">
         Figure 1. Pure Spectrum
     </p>
@@ -44,7 +48,7 @@ In order to remove these images, we need a lowpass filter where the bandwidth of
 
 #### What techniques might we use to generate a higher- fidelity signal out of the DAC?
 
-To combat sinc roll-off from the DAC we can add an equalizing stage. For this homework, I opted to combine the equalizer with the lowpass filter needed to remove spectral images. The figure below shows an ideal lowpass filter that's passband is 50kHz (the sample rate of our original signal) and that's gain response is the inverse sinc function.
+To combat sinc roll-off from the DAC we can add an equalizing stage that's gain response is the inverse sinc function. For this homework, I opted to combine the equalizer with the lowpass filter needed to remove spectral images. The figure below shows an ideal lowpass filter that's passband is 50kHz (the sample rate of our original signal) and that's gain response is the inverse sinc function.
 
 <p align="center">
     <img src="plots/pre_equalization_filter.png" alt="Equalizing Filter" width="500"/>
