@@ -14,7 +14,7 @@ The Fourier transform of the rectangle function is a sinc function. The longer t
 Lastly, the Fourier transform of the dirac comb is another dirac comb, however the spacing between delta functions in the frequency domain is proportional to the reciprocal of the spacing between delta functions in the time domain. One can verify this by altering the python script to show an interactive plot. By zooming into the plot of the Fourier transform of the dirac comb, one can see that the spacing between delta functions is 4 samples which is equal to the signal length divided by the delta function spacing in the time domain (4 = 256 / 64).
 
 <p align="center">
-    <img src="plots/fourier_transforms.png" alt="Fourier Transform Pairs" width="500"/>
+    <img src="plots/fourier_transforms.png" alt="Fourier Transform Pairs" width="550"/>
 </p>
 
 ## Compare convolution in time domain with convolution in freq domain (They should be the same)
@@ -32,7 +32,7 @@ True
 ```
 
 <p align="center">
-    <img src="plots/conv_vs_mult.png" alt="Convolution vs Multiplication" width="500"/>
+    <img src="plots/conv_vs_mult.png" alt="Convolution vs Multiplication" width="650"/>
 </p>
 
 #### Measure time spent on each function. Does processing time change with length of signals?
@@ -40,5 +40,5 @@ True
 Python's timeit() function was used to measure the processing time of convolution in the time domain and multiplication in the frequency domain using the numpy library. Several array lengths were tested, with a mix of powers of 2 and non-powers of 2. Each array length was measured over 1000 trials. The figure below shows that multiplying in the frequency domain is an order of magnitude faster than convolution for large array sizes.
 
 <p align="center">
-    <img src="plots/processing_time.png" alt="Processing Time" width="500"/>
+    <img src="plots/processing_time.png" alt="Processing Time" width="650"/>
 </p>
