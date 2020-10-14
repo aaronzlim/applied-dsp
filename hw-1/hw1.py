@@ -3,7 +3,6 @@
 from pathlib import Path
 import numpy as np
 from numpy.fft import fft, fftshift, fftfreq
-from scipy.signal import find_peaks
 from matplotlib import pyplot as plt
 
 def sinusoid(sample_rate: float, frequency: float, duration: float, phase: float = 0) -> np.ndarray:
