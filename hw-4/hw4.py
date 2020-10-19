@@ -145,6 +145,19 @@ if __name__ == '__main__':
                         fs=fs)
     bpf = lpf * osc # combine lpf with osc to get bpf
 
+    eps = np.finfo(bpf.dtype).eps
+
+    BPF = 10 * np.log10(fftshift(np.abs(fft(bpf))))
+    f = fftshift(fftfreq(len(bpf), d=1/fs))
+    plt.plot(f/1e6, BPF)
+    plt.title('Filter used to Decimate by 4')
+    plt.xlabel('Frequency (MHz)')
+    plt.ylabel('Magnitude Response (dB)')
+    plt.ylim((-50, 10))
+    plt.grid()
+    plt.savefig('./hw-4/plots/bpf_dec4.png')
+    plt.close()
+
     # apply the filter and decimate
     xf = np.convolve(x, bpf, mode='same')[::4]
     fsd = fs/4 # sample rate after decimation
@@ -154,7 +167,19 @@ if __name__ == '__main__':
     # break this down into 3x decimate by 5 stages
 
     # Create a filter with cutoff fs/5
-    lpf_dec5 = signal.firwin(num_taps, cutoff=1/5, width=1/20)
+    lpf_dec5 = signal.firwin(num_taps, cutoff=1/10, width=1/20, fs=1)
+
+    LPF_dec5 = 10 * np.log10(np.abs(fftshift(fft(lpf_dec5))))
+    f = fftshift(fftfreq(len(LPF_dec5), d=1))
+    plt.plot(f, LPF_dec5)
+    plt.title('Filter used to Decimate by 5')
+    plt.xlabel('Normalized Frequency (f/fs)')
+    plt.ylabel('Magnitude Response (dB)')
+    plt.xlim((-0.5, 0.5))
+    plt.ylim((-50, 10))
+    plt.grid()
+    plt.savefig('./hw-4/plots/lpf_dec5.png')
+    plt.close()
 
     # apply the filter and decimate in 3 stages
     for _ in range(3):
